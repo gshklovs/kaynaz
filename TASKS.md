@@ -30,3 +30,8 @@
 - M2: Static pages (About, Clinicians, Forms, Contact)
 - M3: Blog + Email API working
 - M4: Content review + accessibility check + build green
+
+### Next Steps
+- Configure SMTP and email env vars in `.env.local`
+- Replace placeholder rates, credentials, phone, and email with production values
+- Add illustrations and a scenic image to Contact per brand guide
