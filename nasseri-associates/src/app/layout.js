@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
 import Link from "next/link";
+import Header from "../components/Header";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
@@ -23,6 +24,11 @@ export const metadata = {
   }
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
@@ -32,27 +38,6 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
-  );
-}
-
-function Header() {
-  return (
-    <header className="border-b border-slate-200 bg-brand-sand/30">
-      <div className="container-responsive py-5 flex items-center justify-between">
-        <Link href="/" className="flex items-baseline gap-2">
-          <span className="text-2xl font-semibold font-display text-brand-secondary">Nasseri &amp; Associates</span>
-          <span className="text-sm text-slate-600">Therapy and Clinical Supervision</span>
-        </Link>
-        <nav className="flex items-center gap-6 text-sm">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/clinicians">Clinicians</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/forms">Client Forms</Link>
-          <Link href="/contact" className="px-3 py-1.5 rounded-md bg-brand-primary text-white hover:bg-brand-secondary">Contact</Link>
-        </nav>
-      </div>
-    </header>
   );
 }
 
