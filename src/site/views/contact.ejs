@@ -1,0 +1,54 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Contact</h1>
+    <p class="lead">We offer virtual sessions. Text or email to request an appointment. Complimentary 15–20 minute consultations are available.</p>
+  </div>
+</section>
+
+<section class="container">
+  <%- include('partials/flash') %>
+  <div class="grid-two">
+    <div>
+      <div class="contact-card card">
+        <h3>Get in touch</h3>
+        <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a><br>Phone: (000) 000‑0000</p>
+        <div class="scenic">Scenic placeholder</div>
+      </div>
+    </div>
+    <div>
+      <form class="card form" method="post" action="/contact">
+        <input type="hidden" name="_csrf" value="" />
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone number (optional)</label>
+          <input id="phone" name="phone" type="tel" />
+        </div>
+        <div class="field">
+          <label for="paymentMethod">Preferred payment method</label>
+          <select id="paymentMethod" name="paymentMethod">
+            <option value="PPO Insurance">PPO Insurance (out‑of‑network)</option>
+            <option value="HMO Insurance">HMO Insurance</option>
+            <option value="Cash">Self‑pay (cash/credit)</option>
+            <option value="EAP">Employee Assistance Program (EAP)</option>
+            <option value="Other">Other / Not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="details">How can we help?</label>
+          <textarea id="details" name="details" rows="6" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+  <p class="small muted" style="margin-top:1rem;">By submitting this form, you agree to be contacted and understand email may not be a secure medium. Please do not share sensitive information here.</p>
+  <p class="small muted">For emergencies, call 911 or go to your nearest emergency room.</p>
+</section>
+

@@ -1,0 +1,24 @@
+<section class="container">
+  <h1>New Blog Post</h1>
+  <form class="card form" method="post" action="/admin/new-post">
+    <input type="hidden" name="token" value="<%= token %>" />
+    <div class="field">
+      <label for="title">Title</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+    <div class="field">
+      <label for="slug">Slug</label>
+      <input id="slug" name="slug" type="text" placeholder="my-first-post" required />
+    </div>
+    <div class="field">
+      <label for="date">Date</label>
+      <input id="date" name="date" type="date" />
+    </div>
+    <div class="field">
+      <label for="content">Content (Markdown)</label>
+      <textarea id="content" name="content" rows="12"></textarea>
+    </div>
+    <button class="btn" type="submit">Publish</button>
+  </form>
+</section>
+
