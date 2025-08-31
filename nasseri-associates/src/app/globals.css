@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 255 255 255;
+  --color-sand: 246 241 235;
+  --color-text: 31 41 55; /* slate-800 */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-slate-800 font-body antialiased;
+}
+
+a {
+  @apply text-brand-primary hover:text-brand-secondary transition-colors;
+}
+
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.prose-custom {
+  @apply prose prose-slate max-w-none;
+}
+
