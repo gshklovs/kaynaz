@@ -1,0 +1,24 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <p class="lead">Insights on mental health, practice, and thoughtful care.</p>
+  </div>
+  </section>
+
+<section class="container">
+  <div class="post-list">
+    <% if (!posts || posts.length === 0) { %>
+      <p>No articles yet. Please check back soon.</p>
+    <% } else { %>
+      <% posts.forEach((p) => { %>
+        <article class="post-card card">
+          <h3><a href="/blog/<%= p.slug %>"><%= p.title %></a></h3>
+          <% if (p.date) { %><div class="muted small"><%= new Date(p.date).toLocaleDateString() %></div><% } %>
+          <p><%= p.excerpt %>...</p>
+          <a class="link" href="/blog/<%= p.slug %>">Read more →</a>
+        </article>
+      <% }) %>
+    <% } %>
+  </div>
+</section>
+

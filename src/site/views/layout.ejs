@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container flex header-inner">
+        <a class="brand" href="/">
+          <span class="brand-title">Nasseri & Associates</span>
+          <span class="brand-sub">Therapy and Clinical Supervision</span>
+        </a>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About</a>
+          <a href="/forms">Client Forms</a>
+          <a class="btn" href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <%- body %>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand-title">Nasseri & Associates</div>
+            <div class="brand-sub">Therapy and Clinical Supervision</div>
+          </div>
+          <div class="footer-meta">
+            <div>Virtual sessions available</div>
+            <div>Email: example@gmail.com</div>
+            <div>Phone: (000) 000-0000</div>
+          </div>
+        </div>
+        <div class="small">© <%= new Date().getFullYear() %> Nasseri & Associates. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>
+
